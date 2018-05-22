@@ -1,6 +1,18 @@
 <div class="market">
-  <%= link_to "Buy", votes_path(order: 'buy'), method: 'post', 'data-attribute': 'buy', class: "btn btn-success btn-lg" %>
-  <br>
-  <br>
-  <%= link_to "Sell", votes_path(order: 'buy'), method: 'post', 'data-attribute': 'sell', class: "btn btn-danger btn-lg" %>
+  <div class="primary">
+    <%= link_to "Buy 💵", votes_path(order: 'buy'), method: 'post', class: "btn btn-alexis btn-lg" %>
+    <br>
+    <br>
+    <%= link_to "Sell 💸", votes_path(order: 'sell'), method: 'post', class: "btn btn-alexis btn-lg" %>
+  </div>
+
+  <div class="secondary">
+    <br>
+    <p>You make up the market value !</p>
+  </div>
+
+  <div class="bottom">
+    <p>The wedding' speach</p>
+  </div>
+
 </div>

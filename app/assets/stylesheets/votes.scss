@@ -36,3 +36,41 @@
 .market_value h4 {
   color: #ffffff;
 }
+
+.market_value h5 {
+  color: #ffffff;
+}
+
+.btn-alexis {
+  background-color: #225aa8;
+  color: #ffffff;
+}
+
+.btn-alexis:hover {
+  background-color: #2561b8;
+  color: #ffffff;
+}
+
+.secondary {
+  color: #ffffff;
+}
+
+.graph {
+  background-color: rgba(136, 197, 255, 0.700);
+  padding: 20px;
+  margin: 10px;
+}
+
+.bottom {
+  margin: auto;
+  color: #ffffff;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom p {
+  font-size: 15px;
+  font-weight: lighter;
+}
