@@ -1,9 +1,7 @@
 class StocksController < ApplicationController
 
   def show
-    stock = Stock.first
-    @market_value = stock.market_value
-    @sells = Vote.where(buy: false)
-    @buys = Vote.where(buy: true)
+    @votes = Vote.all
+    @market_value = Stock.first.price.round(2)
   end
 end

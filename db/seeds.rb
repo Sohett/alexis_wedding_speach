@@ -6,7 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-alexis_sexy_stock = Stock.new(name: 'alexis_sexy_stock', price: 0)
-alexis_sexy_stock.save
-
+Stock.create(name: 'alexis_sexy_stock', price: 100.0)
 puts 'alexis_sexy_stock created'

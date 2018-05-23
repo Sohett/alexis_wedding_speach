@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_22_105821) do
+ActiveRecord::Schema.define(version: 2018_05_23_073135) do
 
   create_table "stocks", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "votes", force: :cascade do |t|
     t.boolean "buy"
-    t.integer "amount", default: 1
+    t.float "stock_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "stock_id"

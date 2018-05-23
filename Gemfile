@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.5'
 # charts
 gem 'groupdate'
 gem "chartkick"
+# charts better
+gem 'morrisjs-rails'
+gem 'raphael-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
