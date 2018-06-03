@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "votes#new"
 
   resources :votes, only: [:new, :create]
-  resources :stocks, only: [:show]
+  resources :stocks, only: [:show, :index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
