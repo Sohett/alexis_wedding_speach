@@ -12,26 +12,27 @@
   </div>
 </div>
 
+<div class="chart">
+  <div id="chart" style="width: auto; height: 100vh; padding: 10px;"></div>
 
-<div id="chart" style="width: auto; height: 600px;"></div>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <%= javascript_tag do -%>
+    google.charts.load('current', {'packages':['line']});
+    google.charts.setOnLoadCallback(drawChart);
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<%= javascript_tag do -%>
-  google.charts.load('current', {'packages':['line']});
-  google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = JSON.parse('<%= @stocks_value_per_minute.to_json.html_safe -%>');
+      data = [['Minutes:Seconds', 'Price']].concat(data);
+      data = google.visualization.arrayToDataTable(data);
+      var options = {
+        chart: {
+          legend: { position: 'bottom' },
+        },
+      };
 
-  function drawChart() {
-    var data = JSON.parse('<%= @stocks_value_per_minute.to_json.html_safe -%>');
-    data = [['Minutes:Seconds', 'Price']].concat(data);
-    data = google.visualization.arrayToDataTable(data);
-    var options = {
-      chart: {
-        title: 'Price Value over the speech',
-        legend: { position: 'bottom' }
-      }
-    };
+      var chart = new google.charts.Line(document.getElementById('chart'));
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  <% end -%>
 
-    var chart = new google.charts.Line(document.getElementById('chart'));
-    chart.draw(data, google.charts.Line.convertOptions(options));
-  }
-<% end -%>
+</div>
