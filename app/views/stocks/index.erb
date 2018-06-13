@@ -1,10 +1,9 @@
 <div class="market">
 
   <div>
-    <h4> Market Value </h4>
-    <p><%= @market_value %> $</p>
+    <p>Connectez-vous à</p>
     <br>
-    <%= link_to "Back to the market place", new_vote_path, class: "btn btn-default" %>
+    <h1> discours.ovh </h1>
   </div>
 
   <div class="bottom">
@@ -22,7 +21,7 @@
 
     function drawChart() {
       var data = JSON.parse('<%= @stocks_value_per_minute.to_json.html_safe -%>');
-      data = [['Minutes:Seconds', 'Price']].concat(data);
+      data = [['Minutes:Seconds', 'Alex & Company']].concat(data);
       data = google.visualization.arrayToDataTable(data);
       var options = {
         chart: {
